@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Assign1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  
+  <body>
+    <p>
+      (1.) Create an array of fruits starting with letter "c", and display in a div
+      with id="cFruits".
+    </p>    
+    <div id="cFruits"></div>
+    
+    <p>
+      (2.) Create an array of fruits containing letter "a", and display in a
+      div with id="aFruits".
+    </p>
+    <div id="aFruits"></div>
+    
+    <p>
+      (3.) Print out array fruits in a div with id="allFruits" in this manner;<br>
+      List of Fruits:<br>
+        1. Banana<br>
+        2. Apple and so on.<br>
+        <br>
+        Answer:
+    </p>
+    <div id="allFruits"></div>
+    <script>
+      var fruits = ["banana", "apple", "orange", "cucumber", "grape", "cherry",
+      "guava", "plum"];
+          
+      var myDiv = document.getElementById("cFruits");
+      myDiv.innerHTML = ["cucumber", "cherry"];
+      
+      var myDiv1 = document.getElementById("aFruits");
+      myDiv1.innerHTML = ["banana", "apple", "orange", "grape", "guava"];
+      
+      var myDiv2;
+      myDiv2 = "<ol>"; 
+      for(var index=0; index < fruits.length; index++){
+        myDiv2 += "<li>" + fruits[index] + "</li>";
+      }
+      myDiv2 += "</ol>";
+      document.getElementById("allFruits").innerHTML = myDiv2;
+      
+          
+    </script>    
+  </body>
+</html>
